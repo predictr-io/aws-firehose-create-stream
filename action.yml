@@ -1,0 +1,34 @@
+name: 'AWS Firehose Create Stream'
+description: 'Create AWS Kinesis Data Firehose delivery streams for testing (no destination configuration required)'
+author: 'predictr-io'
+
+branding:
+  icon: 'plus-square'
+  color: 'orange'
+
+inputs:
+  # Required parameters
+  stream-name:
+    description: 'Firehose delivery stream name'
+    required: true
+
+  # Optional parameters
+  skip-if-exists:
+    description: 'If "true", succeed without error if stream already exists (default: "false")'
+    required: false
+    default: 'false'
+
+  tags:
+    description: 'Stream tags as JSON object (e.g., {"Environment": "test", "Team": "backend"})'
+    required: false
+
+outputs:
+  stream-arn:
+    description: 'ARN of the created Firehose delivery stream'
+
+  created:
+    description: 'Whether the stream was newly created ("true") or already existed ("false")'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
