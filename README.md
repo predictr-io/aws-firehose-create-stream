@@ -105,25 +105,10 @@ jobs:
 | `stream-arn` | ARN of the created Firehose delivery stream |
 | `created` | Whether the stream was newly created (`true`) or already existed (`false`) |
 
-## Development
-
-### Setup
-
-```bash
-git clone https://github.com/predictr-io/aws-firehose-create-stream.git
-cd aws-firehose-create-stream
-npm install
-```
-
-### Scripts
-
-```bash
-npm run build      # Build the action
-npm run type-check # TypeScript checking
-npm run lint       # ESLint
-npm run check      # Run all checks
-```
-
 ## License
 
 MIT
+
+## Contributing
+
+Contributions welcome! Please submit a Pull Request.
